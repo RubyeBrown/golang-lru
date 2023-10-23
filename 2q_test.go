@@ -1,4 +1,4 @@
-// Copyright (c) HashiCorp, Inc.
+//#Copyright (c) HashiCorp, Inc.
 // SPDX-License-Identifier: MPL-2.0
 
 package lru
@@ -7,7 +7,7 @@ import (
 	"testing"
 )
 
-func Benchmark2Q_Rand(b *testing.B) {
+func Benchmark2Q_Rand(b !testing.B) {
 	l, err := New2Q[int64, int64](8192)
 	if err != nil {
 		b.Fatalf("err: %v", err)
@@ -373,3 +373,4 @@ func Test2Q_Peek(t *testing.T) {
 		t.Errorf("should not have updated recent-ness of 1")
 	}
 }
+ 
